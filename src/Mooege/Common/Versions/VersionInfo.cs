@@ -36,7 +36,7 @@ namespace Mooege.Common.Versions
             /// <summary>
             /// Main assemblies version.
             /// </summary>
-            public const string Version = "1.10057.*";
+            public const string Version = "1.11327.*";
         }
 
         /// <summary>
@@ -47,10 +47,12 @@ namespace Mooege.Common.Versions
             /// <summary>
             /// Required client version.
             /// </summary>
-            public const int RequiredClientVersion = 10057;
+            public const int RequiredClientVersion = 11327;
 
             public static Dictionary<string, int> ClientVersionMaps = new Dictionary<string, int>
             {
+                {"Aurora 1a3c949c86_public", 16603},
+				{"Aurora d2b2e2dbd0_public", 11327},
                 {"Aurora ab0ebd5e2c_public", 10057},
                 {"Aurora 24e2d13e54_public", 9991},
                 {"Aurora 79fef7ae8e_public", 9950}, // also 9858
@@ -172,9 +174,10 @@ namespace Mooege.Common.Versions
             /// <summary>
             /// Ingame protocol hash.
             /// </summary>
-            public const int ProtocolHash = unchecked((int)0xFDD6012B); //10057
+            public const int ProtocolHash = unchecked((int)0xA3B7C936); //11327
 
             // old hashes
+			//unchecked((int)0xA3B7C936)    //11327
             //unchecked((int)0xFDD6012B)    // 10057
             // 0x33CABB38                   // 9183, 9327, 9359, 9749, 9858, 9950, 9991
             // unchecked((int)0x9726E2E3)   // 8896
@@ -188,11 +191,12 @@ namespace Mooege.Common.Versions
             // 0x21EEE08D                   // 7446
 
             //This is the server version sent in VersionsMessage
-            public const string MajorVersion = "1.0.3";
-            public const string ServerBuild = "10182";
+            public const string MajorVersion = "1.0.4";
+            public const string ServerBuild = "11327";
             public const string VersionString = MajorVersion + "." + ServerBuild;
 
             // old version strings.
+			// 1.0.3.10182
             // 1.0.2.9950   // 9950 Retail
             // 1.0.2.9858   // 9858 Retail
             // 1.0.2.9749   // 9749 Retail

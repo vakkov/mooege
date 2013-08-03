@@ -41,7 +41,7 @@ message Digest
     required sint32 level = 5;
     required uint32 player_flags = 6;
     required .D3.Hero.VisualEquipment visual_equipment = 7;
-    repeated .D3.Hero.QuestHistoryEntry quest_history = 8;
+    repeated .D3.Hero.QuestHistoryEntry history = 8;
     required sint32 last_played_act = 9;
     required sint32 highest_unlocked_act = 10;
     required sint32 last_played_difficulty = 11;
@@ -53,6 +53,7 @@ message Digest
     optional uint32 create_time = 17;
     optional uint32 last_played_time = 18;
     optional uint32 delete_time = 19;
+    optional sint32 alt_level = 20;
 }
 
 message DigestUI
@@ -130,7 +131,7 @@ message SavedDefinition
     optional .D3.Hero.SavedData saved_data = 4;
     repeated .D3.Hero.SavedQuest saved_quest = 5;
     optional .D3.Items.ItemList items = 6;
-    repeated .D3.Hero.QuestRewardHistoryEntry quest_reward_history = 7;
+    repeated .D3.Hero.QuestRewardHistoryEntry reward_history = 7;
 }
 
 message NameText

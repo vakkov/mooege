@@ -14,7 +14,7 @@ message InventoryOperation
     }
 
     required .D3.AuctionHouse.InventoryOperation.Operation operation = 1;
-    required .D3.OnlineService.EntityId transaction_hero_id = 2;
+    required .D3.OnlineService.EntityId location_id = 2;
     required .D3.OnlineService.ItemId id = 3;
     optional sint32 item_slot = 4;
     optional sint32 square_index = 5;

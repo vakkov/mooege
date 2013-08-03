@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TypeDescriptors ProtocolHash="0">
+<TypeDescriptors ProtocolHash="-2016547645">
   <StructureDescriptor Index="0" Name="ConvexHull">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Name="serVertices" Type="SerializeData#2" Offset="4" Flags="0" />
@@ -546,14 +546,14 @@
     <Field Type="DT_FLOAT#5" Offset="76" Flags="1" EncodedBits="32" />
     <Field Offset="80" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="85" Name="EndOfTickMessage" Size="16" NetworkIds="152">
+  <StructureDescriptor Index="85" Name="EndOfTickMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="86" Name="RequiredMessageHeader">
-    <Field Type="DT_INT#1" Offset="4" Min="0" Max="322" Flags="17" EncodedBits="9" />
+    <Field Type="DT_INT#1" Offset="4" Min="0" Max="323" Flags="17" EncodedBits="9" />
     <Field Offset="8" Flags="0" />
   </StructureDescriptor>
   <StructureDescriptor Index="87" Name="Textures" UnkValue="2">
@@ -1645,26 +1645,26 @@
     <Field Name="rgbavalDiffuse" Type="RGBAColorValue#36" Offset="76" Flags="0" />
     <Field Offset="92" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="178" Name="CreateHeroResultMessage" Size="32" NetworkIds="24">
+  <StructureDescriptor Index="178" Name="CreateHeroResultMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="2" Flags="17" EncodedBits="2" />
     <Field Type="EntityId#179" Offset="16" Flags="1" />
     <Field Offset="32" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="179" Name="EntityId">
     <Field Type="DT_INT64#89" Offset="0" Flags="1" EncodedBits="64" />
     <Field Type="DT_INT64#89" Offset="8" Flags="1" EncodedBits="64" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="180" Name="CreateHeroMessage" Size="68" NetworkIds="23">
+  <StructureDescriptor Index="180" Name="CreateHeroMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_CHARARRAY#24" Offset="8" Flags="1" ArrayLength="49" EncodedBits="6" />
     <Field Type="DT_GBID#181" Offset="60" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="64" Min="0" Max="1073741823" Flags="17" EncodedBits="30" />
     <Field Offset="68" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <BasicDescriptor Index="181" Name="DT_GBID" />
-  <GameMessageDescriptor Index="182" Name="JoinBNetGameMessage" Size="80" NetworkIds="10">
+  <StructureDescriptor Index="182" Name="JoinBNetGameMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="EntityId#179" Offset="8" Flags="1" />
     <Field Type="GameId#183" Offset="24" Flags="1" />
@@ -1674,39 +1674,39 @@
     <Field Type="DT_INT#1" Offset="68" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="72" Flags="1" EncodedBits="32" />
     <Field Offset="80" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="183" Name="GameId">
     <Field Type="DT_INT64#89" Offset="0" Flags="1" EncodedBits="64" />
     <Field Type="DT_INT64#89" Offset="8" Flags="1" EncodedBits="64" />
     <Field Type="DT_INT64#89" Offset="16" Flags="1" EncodedBits="64" />
     <Field Offset="24" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="184" Name="BNetJoinGameRequestResultMessage" Size="72" NetworkIds="9">
+  <StructureDescriptor Index="184" Name="BNetJoinGameRequestResultMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="5" Flags="17" EncodedBits="3" />
     <Field Type="GameId#183" Offset="16" Flags="1" />
     <Field Type="DT_INT64#89" Offset="40" Flags="1" EncodedBits="64" />
     <Field Type="DT_INT#1" Offset="48" Min="-1" Max="5" Flags="17" EncodedBits="3" />
     <Field Type="DT_SNO#78" Offset="52" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="56" Min="0" Max="65535" Flags="17" EncodedBits="16" />
+    <Field Type="DT_INT#1" Offset="56" Min="0" Max="262143" Flags="17" EncodedBits="18" />
     <Field Type="DT_INT#1" Offset="60" Flags="1" EncodedBits="32" />
     <Field Type="DT_WORD#33" Offset="64" Flags="1" EncodedBits="16" />
     <Field Offset="72" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="185" Name="RequestJoinBNetGameMessage" Size="56" NetworkIds="8">
+  </StructureDescriptor>
+  <StructureDescriptor Index="185" Name="RequestJoinBNetGameMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="GameId#183" Offset="8" Flags="1" />
     <Field Type="EntityId#179" Offset="32" Flags="1" />
     <Field Type="DT_INT#1" Offset="48" Min="-1" Max="22" Flags="17" EncodedBits="5" />
     <Field Offset="56" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="186" Name="CreateBNetGameResultMessage" Size="40" NetworkIds="5">
+  </StructureDescriptor>
+  <StructureDescriptor Index="186" Name="CreateBNetGameResultMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="2" Flags="17" EncodedBits="2" />
     <Field Type="GameId#183" Offset="16" Flags="1" />
     <Field Offset="40" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="187" Name="CreateBNetGameMessage" Size="88" NetworkIds="4">
+  </StructureDescriptor>
+  <StructureDescriptor Index="187" Name="CreateBNetGameMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_CHARARRAY#24" Offset="8" Flags="1" ArrayLength="33" EncodedBits="6" />
     <Field Type="DT_INT#1" Offset="44" Min="-1" Max="5" Flags="17" EncodedBits="3" />
@@ -1715,34 +1715,34 @@
     <Field Type="DT_INT#1" Offset="56" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="60" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_SNO#78" Offset="64" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="68" Min="0" Max="65535" Flags="17" EncodedBits="16" />
+    <Field Type="DT_INT#1" Offset="68" Min="0" Max="262143" Flags="17" EncodedBits="18" />
     <Field Type="DT_INT#1" Offset="72" Min="1" Max="8" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="76" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="80" Flags="1" EncodedBits="32" />
     <Field Type="DT_WORD#33" Offset="84" Flags="1" EncodedBits="16" />
     <Field Offset="88" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="188" Name="EffectGroupACDToACDMessage" Size="20" NetworkIds="181">
+  </StructureDescriptor>
+  <StructureDescriptor Index="188" Name="EffectGroupACDToACDMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="189" Name="RopeEffectMessageACDToPlace" Size="36" NetworkIds="183">
+  </StructureDescriptor>
+  <StructureDescriptor Index="189" Name="RopeEffectMessageACDToPlace">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Min="0" Max="19" Flags="17" EncodedBits="5" />
     <Field Type="WorldPlace#190" Offset="20" Flags="1" />
     <Field Offset="36" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="190" Name="WorldPlace">
     <Field Type="Vector3D#4" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="191" Name="RopeEffectMessageACDToACD" Size="28" NetworkIds="182">
+  <StructureDescriptor Index="191" Name="RopeEffectMessageACDToACD">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -1750,73 +1750,73 @@
     <Field Type="DT_INT#1" Offset="20" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="24" Min="0" Max="19" Flags="17" EncodedBits="5" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="192" Name="PlayMusicMessage" Size="12" NetworkIds="137">
+  </StructureDescriptor>
+  <StructureDescriptor Index="192" Name="PlayMusicMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoMusic" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="62" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="193" Name="PlayNonPositionalSoundMessage" Size="12" NetworkIds="135">
+  </StructureDescriptor>
+  <StructureDescriptor Index="193" Name="PlayNonPositionalSoundMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="194" Name="PlayHitEffectOverrideMessage" Size="20" NetworkIds="134">
+  </StructureDescriptor>
+  <StructureDescriptor Index="194" Name="PlayHitEffectOverrideMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="195" Name="PlayHitEffectMessage" Size="24" NetworkIds="133">
+  </StructureDescriptor>
+  <StructureDescriptor Index="195" Name="PlayHitEffectMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Min="-1" Max="6" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="20" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="196" Name="PlayEffectMessage" Size="24" NetworkIds="132">
+  </StructureDescriptor>
+  <StructureDescriptor Index="196" Name="PlayEffectMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="12" Min="-1" Max="70" Flags="17" EncodedBits="7" />
+    <Field Type="DT_INT#1" Offset="12" Min="-1" Max="71" Flags="17" EncodedBits="7" />
     <Field Type="DT_OPTIONAL#197" Offset="16" Flags="1" SubType="DT_INT#1" EncodedBits="32" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <BasicDescriptor Index="197" Name="DT_OPTIONAL" />
-  <GameMessageDescriptor Index="198" Name="EndConversationMessage" Size="16" NetworkIds="202">
+  <StructureDescriptor Index="198" Name="EndConversationMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="199" Name="StopConvLineMessage" Size="16" NetworkIds="198">
+  </StructureDescriptor>
+  <StructureDescriptor Index="199" Name="StopConvLineMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="200" Name="UpdateConvAutoAdvanceMessage" Size="20" NetworkIds="200">
+  </StructureDescriptor>
+  <StructureDescriptor Index="200" Name="UpdateConvAutoAdvanceMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="201" Name="AdvanceConvMessage" Size="16" NetworkIds="199">
+  </StructureDescriptor>
+  <StructureDescriptor Index="201" Name="AdvanceConvMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="202" Name="PlayConvLineMessage" Size="176" NetworkIds="197">
+  </StructureDescriptor>
+  <StructureDescriptor Index="202" Name="PlayConvLineMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_FIXEDARRAY#20" Offset="12" Flags="1" SubType="DT_INT#1" ArrayLength="9" EncodedBits="32" />
     <Field Type="PlayLineParams#203" Offset="48" Flags="1" />
     <Field Type="DT_INT#1" Offset="172" Flags="1" EncodedBits="32" />
     <Field Offset="176" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="203" Name="PlayLineParams">
     <Field Name="snoConversation" Type="DT_SNO#78" Offset="0" Flags="1" EncodedBits="32" SnoType="12" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
@@ -1838,23 +1838,23 @@
     <Field Type="DT_INT#1" Offset="120" Flags="1" EncodedBits="32" />
     <Field Offset="124" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="204" Name="TimedEventStartedMessage" Size="20" NetworkIds="232">
+  <StructureDescriptor Index="204" Name="TimedEventStartedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="ActiveEvent#205" Offset="8" Flags="1" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="205" Name="ActiveEvent">
     <Field Name="snoTimedEvent" Type="DT_SNO#78" Offset="0" Flags="1" EncodedBits="32" SnoType="55" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="206" Name="ActTransitionStartedMessage" Size="16" NetworkIds="234 311">
+  <StructureDescriptor Index="206" Name="ActTransitionStartedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="207" Name="SceneClusterSet">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_VARIABLEARRAY#3" Offset="8" Flags="33" SubType="SceneCluster#208" VariableOffset="8" />
@@ -1999,36 +1999,36 @@
     <Field Name="m_gbidItem" Type="DT_GBID#181" Offset="8" Flags="1" EncodedBits="32" SnoType="2" />
     <Field Offset="12" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="224" Name="PortalSpecifierMessage" Size="24" NetworkIds="80">
+  <StructureDescriptor Index="224" Name="PortalSpecifierMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="ResolvedPortalDestination#225" Offset="12" Flags="1" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="225" Name="ResolvedPortalDestination">
     <Field Name="snoWorld" Type="DT_SNO#78" Offset="0" Flags="1" EncodedBits="32" SnoType="48" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
     <Field Name="snoDestLevelArea" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="22" />
     <Field Offset="12" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="226" Name="AttributesSetValuesMessage" Size="256" NetworkIds="82">
+  <StructureDescriptor Index="226" Name="AttributesSetValuesMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Name="atKeyVals" Type="DT_FIXEDARRAY#20" Offset="16" Flags="8" SubType="NetAttributeKeyValue#227" ArrayLength="15" ArrayLengthOffset="-4" EncodedBits2="4" />
     <Field Offset="256" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="227" Name="NetAttributeKeyValue">
     <Field Type="DT_OPTIONAL#197" Offset="0" Min="0" Max="1048575" Flags="17" SubType="DT_INT#1" EncodedBits="20" />
-    <Field Type="DT_INT#1" Offset="8" Min="0" Max="826" Flags="17" EncodedBits="10" />
+    <Field Type="DT_INT#1" Offset="8" Min="0" Max="847" Flags="17" EncodedBits="10" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="228" Name="AttributeSetValueMessage" Size="28" NetworkIds="81">
+  <StructureDescriptor Index="228" Name="AttributeSetValueMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="NetAttributeKeyValue#227" Offset="12" Flags="1" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="229" Name="ACDClientTranslateMessage" Size="52" NetworkIds="129">
+  </StructureDescriptor>
+  <StructureDescriptor Index="229" Name="ACDClientTranslateMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="12" Flags="17" EncodedBits="4" />
@@ -2039,16 +2039,16 @@
     <Field Type="DT_INT#1" Offset="40" Min="-1" Max="1048575" Flags="17" EncodedBits="21" />
     <Field Type="DT_OPTIONAL#197" Offset="44" Flags="1" SubType="DT_SNO#78" EncodedBits="32" />
     <Field Offset="52" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="230" Name="ACDTranslateFixedUpdateMessage" Size="36" NetworkIds="128">
+  </StructureDescriptor>
+  <StructureDescriptor Index="230" Name="ACDTranslateFixedUpdateMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="Vector3D#4" Offset="12" Flags="1" />
     <Field Type="Vector3D#4" Offset="24" Flags="1" />
     <Field Offset="36" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <BasicDescriptor Index="231" Name="DT_DATAID" />
-  <GameMessageDescriptor Index="232" Name="ACDTranslateDetPathSpiralMessage" Size="72" NetworkIds="126">
+  <StructureDescriptor Index="232" Name="ACDTranslateDetPathSpiralMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="Vector3D#4" Offset="12" Flags="1" />
@@ -2058,7 +2058,7 @@
     <Field Type="DT_INT#1" Offset="44" Flags="1" EncodedBits="32" />
     <Field Type="DPathSinData#233" Offset="48" Flags="1" />
     <Field Offset="72" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="233" Name="DPathSinData">
     <Field Type="DT_FLOAT#5" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="4" Flags="1" EncodedBits="32" />
@@ -2068,7 +2068,7 @@
     <Field Type="DT_FLOAT#5" Offset="20" Flags="1" EncodedBits="32" />
     <Field Offset="24" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="234" Name="ACDTranslateDetPathSinMessage" Size="104" NetworkIds="125">
+  <StructureDescriptor Index="234" Name="ACDTranslateDetPathSinMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="8" Flags="17" EncodedBits="4" />
@@ -2086,8 +2086,8 @@
     <Field Type="DT_FLOAT#5" Offset="76" Flags="1" EncodedBits="32" />
     <Field Type="DPathSinData#233" Offset="80" Flags="1" />
     <Field Offset="104" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="235" Name="ACDTranslateDetPathMessage" Size="88" NetworkIds="124">
+  </StructureDescriptor>
+  <StructureDescriptor Index="235" Name="ACDTranslateDetPathMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="8" Flags="17" EncodedBits="4" />
@@ -2106,8 +2106,8 @@
     <Field Type="DT_FLOAT#5" Offset="80" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="84" Flags="1" EncodedBits="32" />
     <Field Offset="88" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="236" Name="ACDTranslateArcMessage" Size="64" NetworkIds="123">
+  </StructureDescriptor>
+  <StructureDescriptor Index="236" Name="ACDTranslateArcMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="Vector3D#4" Offset="12" Flags="1" />
@@ -2120,8 +2120,8 @@
     <Field Type="DT_FLOAT#5" Offset="56" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="60" Flags="1" EncodedBits="32" />
     <Field Offset="64" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="237" Name="ACDTranslateFixedMessage" Size="36" NetworkIds="122">
+  </StructureDescriptor>
+  <StructureDescriptor Index="237" Name="ACDTranslateFixedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="Vector3D#4" Offset="12" Flags="1" />
@@ -2129,28 +2129,28 @@
     <Field Type="DT_INT#1" Offset="28" Min="-1" Max="1048575" Flags="17" EncodedBits="21" />
     <Field Type="DT_SNO#78" Offset="32" Flags="1" EncodedBits="32" />
     <Field Offset="36" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="238" Name="ACDTranslateFacingMessage" Size="20" NetworkIds="121 130">
+  </StructureDescriptor>
+  <StructureDescriptor Index="238" Name="ACDTranslateFacingMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_ANGLE#62" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="239" Name="ACDTranslateAckMessage" Size="12" NetworkIds="131">
+  </StructureDescriptor>
+  <StructureDescriptor Index="239" Name="ACDTranslateAckMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="240" Name="ACDTranslateSyncMessage" Size="40" NetworkIds="127">
+  </StructureDescriptor>
+  <StructureDescriptor Index="240" Name="ACDTranslateSyncMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="Vector3D#4" Offset="12" Flags="1" />
     <Field Type="DT_OPTIONAL#197" Offset="24" Min="0" Max="1" Flags="17" SubType="DT_INT#1" EncodedBits="1" />
     <Field Type="DT_OPTIONAL#197" Offset="32" Min="0" Max="65535" Flags="17" SubType="DT_INT#1" EncodedBits="16" />
     <Field Offset="40" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="241" Name="ACDTranslateSnappedMessage" Size="44" NetworkIds="120">
+  </StructureDescriptor>
+  <StructureDescriptor Index="241" Name="ACDTranslateSnappedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="Vector3D#4" Offset="12" Flags="1" />
@@ -2159,8 +2159,8 @@
     <Field Type="DT_INT#1" Offset="32" Min="0" Max="33554431" Flags="17" EncodedBits="25" />
     <Field Type="DT_OPTIONAL#197" Offset="36" Min="0" Max="65535" Flags="17" SubType="DT_INT#1" EncodedBits="16" />
     <Field Offset="44" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="242" Name="ACDTranslateNormalMessage" Size="92" NetworkIds="119">
+  </StructureDescriptor>
+  <StructureDescriptor Index="242" Name="ACDTranslateNormalMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_OPTIONAL#197" Offset="12" Flags="1" SubType="Vector3D#4" />
@@ -2173,7 +2173,7 @@
     <Field Type="DT_OPTIONAL#197" Offset="76" Flags="1" SubType="DT_SNO#78" EncodedBits="32" />
     <Field Type="DT_OPTIONAL#197" Offset="84" Min="0" Max="65535" Flags="17" SubType="DT_INT#1" EncodedBits="16" />
     <Field Offset="92" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="243" Name="NavMeshConnectedSquare">
     <Field Type="NavMeshSquare#244" Offset="0" Flags="1" />
     <Field Type="DT_FIXEDARRAY#20" Offset="8" Flags="1" SubType="DT_INT#1" ArrayLength="4" EncodedBits="32" />
@@ -2186,18 +2186,18 @@
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
     <Field Offset="8" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="245" Name="HirelingSwapMessage" Size="12" NetworkIds="205 206">
+  <StructureDescriptor Index="245" Name="HirelingSwapMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="246" Name="NPCInteractOptionsMessage" Size="340" NetworkIds="154">
+  </StructureDescriptor>
+  <StructureDescriptor Index="246" Name="NPCInteractOptionsMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Name="tNPCInteraction" Type="DT_FIXEDARRAY#20" Offset="12" Flags="8" SubType="NPCInteraction#247" ArrayLength="20" ArrayLengthOffset="320" EncodedBits2="5" />
     <Field Type="DT_INT#1" Offset="336" Min="0" Max="2" Flags="17" EncodedBits="2" />
     <Field Offset="340" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="247" Name="NPCInteraction">
     <Field Type="DT_INT#1" Offset="0" Min="0" Max="8" Flags="17" EncodedBits="4" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
@@ -2205,12 +2205,12 @@
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="3" Flags="17" EncodedBits="2" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="248" Name="VisualInventoryMessage" Size="140" NetworkIds="83">
+  <StructureDescriptor Index="248" Name="VisualInventoryMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="VisualEquipment#249" Offset="12" Flags="1" />
     <Field Offset="140" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="249" Name="VisualEquipment">
     <Field Type="DT_FIXEDARRAY#20" Offset="0" Flags="1" SubType="VisualItem#250" ArrayLength="8" />
     <Field Offset="128" Flags="0" />
@@ -2222,20 +2222,20 @@
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="30" Flags="17" EncodedBits="5" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="251" Name="SetIdleAnimationMessage" Size="16" NetworkIds="176">
+  <StructureDescriptor Index="251" Name="SetIdleAnimationMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="252" Name="PlayAnimationMessage" Size="72" NetworkIds="117">
+  </StructureDescriptor>
+  <StructureDescriptor Index="252" Name="PlayAnimationMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="12" Flags="17" EncodedBits="4" />
     <Field Type="DT_FLOAT#5" Offset="16" Flags="1" EncodedBits="32" />
     <Field Name="tAnim" Type="DT_FIXEDARRAY#20" Offset="24" Flags="8" SubType="PlayAnimationMessageSpec#253" ArrayLength="3" ArrayLengthOffset="-4" EncodedBits2="2" />
     <Field Offset="72" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="253" Name="PlayAnimationMessageSpec">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="4" Flags="1" EncodedBits="32" />
@@ -2243,7 +2243,7 @@
     <Field Type="DT_FLOAT#5" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="254" Name="Message" Size="36" NetworkIds="48">
+  <StructureDescriptor Index="254" Name="Message">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -2253,96 +2253,96 @@
     <Field Type="DT_FLOAT#5" Offset="28" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="32" Flags="1" EncodedBits="32" />
     <Field Offset="36" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="255" Name="UnlockDifficultyMessage" Size="16" NetworkIds="286">
+  </StructureDescriptor>
+  <StructureDescriptor Index="255" Name="UnlockDifficultyMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="256" Name="VersionsMessage" Size="48" NetworkIds="13">
+  </StructureDescriptor>
+  <StructureDescriptor Index="256" Name="VersionsMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_CHARARRAY#24" Offset="16" Flags="1" ArrayLength="32" EncodedBits="6" />
     <Field Offset="48" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="257" Name="LogoutTickTimeMessage" Size="20" NetworkIds="39">
+  </StructureDescriptor>
+  <StructureDescriptor Index="257" Name="LogoutTickTimeMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="258" Name="HirelingRequestLearnSkillMessage" Size="16" NetworkIds="113">
+  </StructureDescriptor>
+  <StructureDescriptor Index="258" Name="HirelingRequestLearnSkillMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="259" Name="PlayErrorSoundMessage" Size="12" NetworkIds="136">
+  </StructureDescriptor>
+  <StructureDescriptor Index="259" Name="PlayErrorSoundMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="260" Name="RequestBuffCancelMessage" Size="16" NetworkIds="293">
+  </StructureDescriptor>
+  <StructureDescriptor Index="260" Name="RequestBuffCancelMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="261" Name="GameTestingSamplingStartMessage" Size="16" NetworkIds="290">
+  </StructureDescriptor>
+  <StructureDescriptor Index="261" Name="GameTestingSamplingStartMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="262" Name="SalvageResultsMessage" Size="60" NetworkIds="241">
+  </StructureDescriptor>
+  <StructureDescriptor Index="262" Name="SalvageResultsMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="gbidOriginalItem" Type="DT_GBID#181" Offset="8" Flags="1" EncodedBits="32" SnoType="2" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="10" Flags="17" EncodedBits="4" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Name="gbidNewItems" Type="DT_FIXEDARRAY#20" Offset="20" Flags="1" SubType="DT_GBID#181" ArrayLength="10" EncodedBits="32" SnoType="2" />
     <Field Offset="60" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="263" Name="DebugActorTooltipMessage" Size="524" NetworkIds="251">
+  </StructureDescriptor>
+  <StructureDescriptor Index="263" Name="DebugActorTooltipMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_CHARARRAY#24" Offset="12" Flags="1" ArrayLength="512" EncodedBits="10" />
     <Field Offset="524" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="264" Name="PlayerWarpedMessage" Size="16" NetworkIds="188">
+  </StructureDescriptor>
+  <StructureDescriptor Index="264" Name="PlayerWarpedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="11" Flags="17" EncodedBits="4" />
     <Field Type="DT_FLOAT#5" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="265" Name="PlayCutsceneMessage" Size="12" NetworkIds="139">
+  </StructureDescriptor>
+  <StructureDescriptor Index="265" Name="PlayCutsceneMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="266" Name="BossZoomMessage" Size="16" NetworkIds="272">
+  </StructureDescriptor>
+  <StructureDescriptor Index="266" Name="BossZoomMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_FLOAT#5" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="267" Name="CameraYawMessage" Size="20" NetworkIds="268">
+  </StructureDescriptor>
+  <StructureDescriptor Index="267" Name="CameraYawMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_ANGLE#62" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_FLOAT#5" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="268" Name="CameraZoomMessage" Size="20" NetworkIds="267">
+  </StructureDescriptor>
+  <StructureDescriptor Index="268" Name="CameraZoomMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_FLOAT#5" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_FLOAT#5" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="269" Name="DebugDrawPrimMessage" Size="188" NetworkIds="279">
+  </StructureDescriptor>
+  <StructureDescriptor Index="269" Name="DebugDrawPrimMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -2355,40 +2355,40 @@
     <Field Type="RGBAColor#37" Offset="56" Flags="1" />
     <Field Type="DT_CHARARRAY#24" Offset="60" Flags="1" ArrayLength="128" EncodedBits="8" />
     <Field Offset="188" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="270" Name="CameraFocusMessage" Size="20" NetworkIds="266">
+  </StructureDescriptor>
+  <StructureDescriptor Index="270" Name="CameraFocusMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_FLOAT#5" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="271" Name="InterstitialMessage" Size="16" NetworkIds="180">
+  </StructureDescriptor>
+  <StructureDescriptor Index="271" Name="InterstitialMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="5" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="272" Name="ActTransitionMessage" Size="16" NetworkIds="179">
+  </StructureDescriptor>
+  <StructureDescriptor Index="272" Name="ActTransitionMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="1000" Flags="17" EncodedBits="10" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="273" Name="EncounterInviteStateMessage" Size="12" NetworkIds="258">
+  </StructureDescriptor>
+  <StructureDescriptor Index="273" Name="EncounterInviteStateMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="9" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="10" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="274" Name="BossEncounterMessage" Size="16" NetworkIds="252 255">
+  </StructureDescriptor>
+  <StructureDescriptor Index="274" Name="BossEncounterMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Name="snoEncounter" Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" SnoType="64" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="275" Name="MapMarkerInfoMessage" Size="72" NetworkIds="243">
+  </StructureDescriptor>
+  <StructureDescriptor Index="275" Name="MapMarkerInfoMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="WorldPlace#190" Offset="12" Flags="1" />
@@ -2404,8 +2404,8 @@
     <Field Type="DT_FLOAT#5" Offset="64" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="68" Flags="1" EncodedBits="32" />
     <Field Offset="72" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="276" Name="TradeMessage" Size="56" NetworkIds="171 172">
+  </StructureDescriptor>
+  <StructureDescriptor Index="276" Name="TradeMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="9" Flags="17" EncodedBits="4" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -2414,133 +2414,133 @@
     <Field Type="DT_INT#1" Offset="32" Flags="1" EncodedBits="32" />
     <Field Type="DT_FIXEDARRAY#20" Offset="36" Flags="1" SubType="DT_INT#1" ArrayLength="5" EncodedBits="32" />
     <Field Offset="56" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="277" Name="PlayerDeSyncSnapMessage" Size="32" NetworkIds="239">
+  </StructureDescriptor>
+  <StructureDescriptor Index="277" Name="PlayerDeSyncSnapMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="WorldPlace#190" Offset="8" Flags="1" />
     <Field Type="DT_INT#1" Offset="24" Min="0" Max="3" Flags="17" EncodedBits="2" />
     <Field Type="DT_SNO#78" Offset="28" Flags="1" EncodedBits="32" />
     <Field Offset="32" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="278" Name="PlayerQuestMessage" Size="16" NetworkIds="237 238">
+  </StructureDescriptor>
+  <StructureDescriptor Index="278" Name="PlayerQuestMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="7" Flags="17" EncodedBits="4" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="279" Name="PRTransformMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="PRTransform#12" Offset="8" Flags="1" />
     <Field Offset="36" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="280" Name="LoreMessage" Size="12" NetworkIds="225">
+  <StructureDescriptor Index="280" Name="LoreMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoLore" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="59" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="281" Name="TryWaypointMessage" Size="16" NetworkIds="153">
+  </StructureDescriptor>
+  <StructureDescriptor Index="281" Name="TryWaypointMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="25" Flags="17" EncodedBits="5" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="282" Name="WaypointActivatedMessage" Size="24" NetworkIds="142">
+  </StructureDescriptor>
+  <StructureDescriptor Index="282" Name="WaypointActivatedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="16" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="20" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="283" Name="WeatherOverrideMessage" Size="20" NetworkIds="192">
+  </StructureDescriptor>
+  <StructureDescriptor Index="283" Name="WeatherOverrideMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoWorld" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="48" />
     <Field Type="DT_FLOAT#5" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="284" Name="BlizzconCVarsMessage" Size="20" NetworkIds="26">
+  </StructureDescriptor>
+  <StructureDescriptor Index="284" Name="BlizzconCVarsMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_INT#1" Offset="16" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="285" Name="WorldDeletedMessage" Size="12" NetworkIds="229">
+  </StructureDescriptor>
+  <StructureDescriptor Index="285" Name="WorldDeletedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="286" Name="WorldStatusMessage" Size="16" NetworkIds="191">
+  </StructureDescriptor>
+  <StructureDescriptor Index="286" Name="WorldStatusMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="287" Name="RemoveRagdollMessage" Size="16" NetworkIds="223">
+  </StructureDescriptor>
+  <StructureDescriptor Index="287" Name="RemoveRagdollMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="288" Name="FloatingAmountMessage" Size="40" NetworkIds="222">
+  </StructureDescriptor>
+  <StructureDescriptor Index="288" Name="FloatingAmountMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="WorldPlace#190" Offset="8" Flags="1" />
     <Field Type="DT_INT#1" Offset="24" Flags="1" EncodedBits="32" />
     <Field Type="DT_OPTIONAL#197" Offset="28" Flags="1" SubType="DT_INT#1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="36" Min="0" Max="32" Flags="17" EncodedBits="6" />
     <Field Offset="40" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="289" Name="FloatingNumberMessage" Size="20" NetworkIds="221">
+  </StructureDescriptor>
+  <StructureDescriptor Index="289" Name="FloatingNumberMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Min="0" Max="32" Flags="17" EncodedBits="6" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="290" Name="SaviorMessage" Size="16" NetworkIds="220">
+  </StructureDescriptor>
+  <StructureDescriptor Index="290" Name="SaviorMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="291" Name="LowHealthCombatMessage" Size="16" NetworkIds="219">
+  </StructureDescriptor>
+  <StructureDescriptor Index="291" Name="LowHealthCombatMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_FLOAT#5" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="292" Name="KillCounterUpdateMessage" Size="24" NetworkIds="218">
+  </StructureDescriptor>
+  <StructureDescriptor Index="292" Name="KillCounterUpdateMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="3" Flags="17" EncodedBits="2" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="20" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="293" Name="ACDLookAtMessage" Size="16" NetworkIds="217">
+  </StructureDescriptor>
+  <StructureDescriptor Index="293" Name="ACDLookAtMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="294" Name="ReturnPointInfoMessage" Size="12" NetworkIds="76">
+  </StructureDescriptor>
+  <StructureDescriptor Index="294" Name="ReturnPointInfoMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoLevelArea" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="22" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="295" Name="HearthPortalInfoMessage" Size="16" NetworkIds="75">
+  </StructureDescriptor>
+  <StructureDescriptor Index="295" Name="HearthPortalInfoMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoLevelArea" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="22" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="296" Name="SavePointInfoMessage" Size="12" NetworkIds="74">
+  </StructureDescriptor>
+  <StructureDescriptor Index="296" Name="SavePointInfoMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoLevelArea" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="22" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="297" Name="MapRevealSceneMessage" Size="52" NetworkIds="73">
+  </StructureDescriptor>
+  <StructureDescriptor Index="297" Name="MapRevealSceneMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Name="snoScene" Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" SnoType="33" />
@@ -2548,30 +2548,30 @@
     <Field Type="DT_INT#1" Offset="44" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="48" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="52" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="298" Name="DeathFadeTimeMessage" Size="24" NetworkIds="208">
+  </StructureDescriptor>
+  <StructureDescriptor Index="298" Name="DeathFadeTimeMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="1800" Flags="17" EncodedBits="11" />
     <Field Type="DT_INT#1" Offset="16" Min="0" Max="1800" Flags="17" EncodedBits="11" />
     <Field Type="DT_INT#1" Offset="20" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="299" Name="RevealTeamMessage" Size="20" NetworkIds="61">
+  </StructureDescriptor>
+  <StructureDescriptor Index="299" Name="RevealTeamMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="22" Flags="17" EncodedBits="5" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="3" Flags="17" EncodedBits="2" />
     <Field Type="DT_INT#1" Offset="16" Min="-1" Max="1" Flags="17" EncodedBits="2" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="300" Name="HirelingInfoUpdateMessage" Size="24" NetworkIds="168">
+  </StructureDescriptor>
+  <StructureDescriptor Index="300" Name="HirelingInfoUpdateMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="3" Flags="17" EncodedBits="2" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="20" Min="0" Max="127" Flags="17" EncodedBits="7" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="301" Name="RitualTetherEffectMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
@@ -2584,19 +2584,19 @@
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="303" Name="UIElementMessage" Size="16" NetworkIds="169">
+  <StructureDescriptor Index="303" Name="UIElementMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="12" Flags="17" EncodedBits="4" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="304" Name="PlayerIntValMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="305" Name="TrickleMessage" Size="124" NetworkIds="71">
+  <StructureDescriptor Index="305" Name="TrickleMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
@@ -2615,33 +2615,33 @@
     <Field Type="DT_OPTIONAL#197" Offset="108" Flags="1" SubType="DT_FLOAT#5" EncodedBits="32" />
     <Field Type="DT_OPTIONAL#197" Offset="116" Min="0" Max="1" Flags="17" SubType="DT_INT#1" EncodedBits="1" />
     <Field Offset="124" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="306" Name="ACDChangeGBHandleMessage" Size="20" NetworkIds="148">
+  </StructureDescriptor>
+  <StructureDescriptor Index="306" Name="ACDChangeGBHandleMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="GBHandle#307" Offset="12" Flags="1" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="307" Name="GBHandle">
     <Field Type="DT_INT#1" Offset="0" Min="-2" Max="37" Flags="17" EncodedBits="6" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
     <Field Offset="8" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="308" Name="AimTargetMessage" Size="36" NetworkIds="147">
+  <StructureDescriptor Index="308" Name="AimTargetMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="3" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Type="WorldPlace#190" Offset="20" Flags="1" />
     <Field Offset="36" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="309" Name="PlayerLevel" Size="16" NetworkIds="163">
+  </StructureDescriptor>
+  <StructureDescriptor Index="309" Name="PlayerLevel">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="127" Flags="17" EncodedBits="7" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="310" Name="ComplexEffectAddMessage" Size="36" NetworkIds="140">
+  </StructureDescriptor>
+  <StructureDescriptor Index="310" Name="ComplexEffectAddMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -2651,62 +2651,62 @@
     <Field Type="DT_INT#1" Offset="28" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="32" Flags="1" EncodedBits="32" />
     <Field Offset="36" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="311" Name="FlippyMessage" Size="32" NetworkIds="141">
+  </StructureDescriptor>
+  <StructureDescriptor Index="311" Name="FlippyMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="16" Flags="1" EncodedBits="32" />
     <Field Type="Vector3D#4" Offset="20" Flags="1" />
     <Field Offset="32" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="312" Name="PetDetachMessage" Size="16" NetworkIds="167">
+  </StructureDescriptor>
+  <StructureDescriptor Index="312" Name="PetDetachMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="313" Name="PetMessage" Size="24" NetworkIds="166">
+  </StructureDescriptor>
+  <StructureDescriptor Index="313" Name="PetMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
-    <Field Type="DT_INT#1" Offset="12" Min="0" Max="31" Flags="17" EncodedBits="5" />
+    <Field Type="DT_INT#1" Offset="12" Min="0" Max="63" Flags="17" EncodedBits="6" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="20" Min="-1" Max="23" Flags="17" EncodedBits="5" />
+    <Field Type="DT_INT#1" Offset="20" Min="-1" Max="25" Flags="17" EncodedBits="5" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="314" Name="HelperDetachMessage" Size="12" NetworkIds="107">
+  </StructureDescriptor>
+  <StructureDescriptor Index="314" Name="HelperDetachMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="315" Name="InventoryRequestSocketMessage" Size="16" NetworkIds="97">
+  </StructureDescriptor>
+  <StructureDescriptor Index="315" Name="InventoryRequestSocketMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="316" Name="InventoryRequestUseMessage" Size="36" NetworkIds="106">
+  </StructureDescriptor>
+  <StructureDescriptor Index="316" Name="InventoryRequestUseMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="3" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Type="WorldPlace#190" Offset="20" Flags="1" />
     <Field Offset="36" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="317" Name="InventoryStackTransferMessage" Size="24" NetworkIds="101">
+  </StructureDescriptor>
+  <StructureDescriptor Index="317" Name="InventoryStackTransferMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT64#89" Offset="16" Flags="1" EncodedBits="64" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="318" Name="InventorySplitStackMessage" Size="40" NetworkIds="99">
+  </StructureDescriptor>
+  <StructureDescriptor Index="318" Name="InventorySplitStackMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT64#89" Offset="16" Flags="1" EncodedBits="64" />
     <Field Type="InvLoc#319" Offset="24" Flags="1" />
     <Field Offset="40" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="319" Name="InvLoc">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="4" Min="-1" Max="26" Flags="17" EncodedBits="5" />
@@ -2714,19 +2714,19 @@
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="320" Name="InventoryDropStackPortionMessage" Size="24" NetworkIds="100">
+  <StructureDescriptor Index="320" Name="InventoryDropStackPortionMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT64#89" Offset="16" Flags="1" EncodedBits="64" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="321" Name="InventoryRequestMoveMessage" Size="28" NetworkIds="95 98">
+  </StructureDescriptor>
+  <StructureDescriptor Index="321" Name="InventoryRequestMoveMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="InvLoc#319" Offset="12" Flags="1" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="322" Name="InventoryRequestQuickMoveMessage" Size="28" NetworkIds="96">
+  </StructureDescriptor>
+  <StructureDescriptor Index="322" Name="InventoryRequestQuickMoveMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -2734,16 +2734,16 @@
     <Field Type="DT_INT#1" Offset="20" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="24" Flags="1" EncodedBits="32" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="323" Name="KillCountMessage" Size="24" NetworkIds="190">
+  </StructureDescriptor>
+  <StructureDescriptor Index="323" Name="KillCountMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="20" Flags="1" EncodedBits="32" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="324" Name="VictimMessage" Size="44" NetworkIds="189">
+  </StructureDescriptor>
+  <StructureDescriptor Index="324" Name="VictimMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="100" Flags="17" EncodedBits="7" />
@@ -2754,56 +2754,56 @@
     <Field Type="DT_FIXEDARRAY#20" Offset="32" Flags="1" SubType="DT_GBID#181" ArrayLength="2" EncodedBits="32" />
     <Field Name="snoPowerDmgSource" Type="DT_SNO#78" Offset="40" Flags="1" EncodedBits="32" SnoType="29" />
     <Field Offset="44" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="325" Name="VoteKickMessage" Size="528" NetworkIds="312 315">
+  </StructureDescriptor>
+  <StructureDescriptor Index="325" Name="VoteKickMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="7" Flags="17" EncodedBits="4" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="7" Flags="17" EncodedBits="4" />
     <Field Type="DT_CHARARRAY#24" Offset="16" Flags="1" ArrayLength="512" EncodedBits="10" />
     <Field Offset="528" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="326" Name="ChatMessage" Size="528" NetworkIds="93">
+  </StructureDescriptor>
+  <StructureDescriptor Index="326" Name="ChatMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="3" Flags="17" EncodedBits="2" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="7" Flags="17" EncodedBits="4" />
     <Field Type="DT_CHARARRAY#24" Offset="16" Flags="1" ArrayLength="512" EncodedBits="10" />
     <Field Offset="528" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="327" Name="TryChatMessage" Size="528" NetworkIds="92">
+  </StructureDescriptor>
+  <StructureDescriptor Index="327" Name="TryChatMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="6" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="7" Flags="17" EncodedBits="4" />
     <Field Type="DT_CHARARRAY#24" Offset="16" Flags="1" ArrayLength="512" EncodedBits="10" />
     <Field Offset="528" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="328" Name="TryConsoleCommand" Size="544" NetworkIds="1 2">
+  </StructureDescriptor>
+  <StructureDescriptor Index="328" Name="TryConsoleCommand">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="7" Flags="17" EncodedBits="4" />
     <Field Type="DT_CHARARRAY#24" Offset="12" Flags="1" ArrayLength="512" EncodedBits="10" />
     <Field Type="WorldPlace#190" Offset="524" Flags="1" />
     <Field Type="DT_INT#1" Offset="540" Flags="1" EncodedBits="32" />
     <Field Offset="544" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="329" Name="LoopingAnimationPowerMessage" Size="20" NetworkIds="87">
+  </StructureDescriptor>
+  <StructureDescriptor Index="329" Name="LoopingAnimationPowerMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoPower" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="29" />
     <Field Name="snoData0" Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" SnoType="29" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="330" Name="SecondaryAnimationPowerMessage" Size="28" NetworkIds="86">
+  </StructureDescriptor>
+  <StructureDescriptor Index="330" Name="SecondaryAnimationPowerMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoPower" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="29" />
     <Field Type="DT_OPTIONAL#197" Offset="12" Flags="1" SubType="AnimPreplayData#331" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="331" Name="AnimPreplayData">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="332" Name="TargetMessage" Size="60" NetworkIds="85">
+  <StructureDescriptor Index="332" Name="TargetMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="3" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -2813,20 +2813,20 @@
     <Field Type="DT_INT#1" Offset="40" Min="0" Max="2" Flags="17" EncodedBits="2" />
     <Field Type="DT_OPTIONAL#197" Offset="44" Flags="1" SubType="AnimPreplayData#331" />
     <Field Offset="60" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="333" Name="PlayerActorSetInitialMessage" Size="16" NetworkIds="62">
+  </StructureDescriptor>
+  <StructureDescriptor Index="333" Name="PlayerActorSetInitialMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="334" Name="ProjectileStickMessage" Size="28" NetworkIds="84">
+  </StructureDescriptor>
+  <StructureDescriptor Index="334" Name="ProjectileStickMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="Vector3D#4" Offset="8" Flags="1" />
     <Field Type="DT_INT#1" Offset="20" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="24" Flags="1" EncodedBits="32" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="335" Name="AttributeDeleteMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
@@ -2841,76 +2841,76 @@
     <Field Type="DT_INT#1" Offset="20" Flags="1" EncodedBits="32" />
     <Field Offset="24" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="337" Name="AffixMessage" Size="148" NetworkIds="77">
+  <StructureDescriptor Index="337" Name="AffixMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="2" Flags="17" EncodedBits="2" />
     <Field Name="aAffixGBIDs" Type="DT_FIXEDARRAY#20" Offset="16" Flags="8" SubType="DT_GBID#181" ArrayLength="32" ArrayLengthOffset="128" EncodedBits="32" EncodedBits2="6" />
     <Field Offset="148" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="338" Name="ACDPickupFailedMessage" Size="16" NetworkIds="165">
+  </StructureDescriptor>
+  <StructureDescriptor Index="338" Name="ACDPickupFailedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="339" Name="ACDChangeActorMessage" Size="16" NetworkIds="187">
+  </StructureDescriptor>
+  <StructureDescriptor Index="339" Name="ACDChangeActorMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="340" Name="ACDGroupMessage" Size="20" NetworkIds="195">
+  </StructureDescriptor>
+  <StructureDescriptor Index="340" Name="ACDGroupMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="341" Name="ACDShearMessage" Size="16" NetworkIds="194">
+  </StructureDescriptor>
+  <StructureDescriptor Index="341" Name="ACDShearMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="342" Name="ACDWorldPositionMessage" Size="48" NetworkIds="68">
+  </StructureDescriptor>
+  <StructureDescriptor Index="342" Name="ACDWorldPositionMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="WorldLocationMessageData#343" Offset="12" Flags="1" />
     <Field Offset="48" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="343" Name="WorldLocationMessageData">
     <Field Type="DT_FLOAT#5" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="PRTransform#12" Offset="4" Flags="1" />
     <Field Type="DT_INT#1" Offset="32" Flags="1" EncodedBits="32" />
     <Field Offset="36" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="344" Name="ACDInventoryUpdateActorSNO" Size="16" NetworkIds="70">
+  <StructureDescriptor Index="344" Name="ACDInventoryUpdateActorSNO">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="345" Name="ACDInventoryPositionMessage" Size="32" NetworkIds="69">
+  </StructureDescriptor>
+  <StructureDescriptor Index="345" Name="ACDInventoryPositionMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="InventoryLocationMessageData#346" Offset="12" Flags="1" />
     <Field Type="DT_INT#1" Offset="28" Flags="1" EncodedBits="32" />
     <Field Offset="32" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="346" Name="InventoryLocationMessageData">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="4" Min="-1" Max="26" Flags="17" EncodedBits="5" />
     <Field Type="IVector2D#35" Offset="8" Flags="1" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="347" Name="PlayerEnterKnownMessage" Size="16" NetworkIds="66">
+  <StructureDescriptor Index="347" Name="PlayerEnterKnownMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="348" Name="ACDEnterKnownMessage" Size="132" NetworkIds="64">
+  </StructureDescriptor>
+  <StructureDescriptor Index="348" Name="ACDEnterKnownMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
@@ -2927,8 +2927,8 @@
     <Field Type="DT_OPTIONAL#197" Offset="113" Flags="1" SubType="DT_INT#1" EncodedBits="32" />
     <Field Type="DT_OPTIONAL#197" Offset="121" Flags="1" SubType="DT_SNO#78" EncodedBits="32" />
     <Field Offset="132" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="349" Name="RevealWorldMessage" Size="40" NetworkIds="60">
+  </StructureDescriptor>
+  <StructureDescriptor Index="349" Name="RevealWorldMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" />
@@ -2939,141 +2939,141 @@
     <Field Type="DT_INT#1" Offset="32" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="36" Flags="1" EncodedBits="32" />
     <Field Offset="40" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="350" Name="EnterWorldMessage" Size="28" NetworkIds="56">
+  </StructureDescriptor>
+  <StructureDescriptor Index="350" Name="EnterWorldMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="Vector3D#4" Offset="8" Flags="1" />
     <Field Type="DT_INT#1" Offset="20" Flags="1" EncodedBits="32" />
     <Field Type="DT_SNO#78" Offset="24" Flags="1" EncodedBits="32" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="351" Name="GameSetupMessage" Size="12" NetworkIds="51">
+  </StructureDescriptor>
+  <StructureDescriptor Index="351" Name="GameSetupMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="352" Name="ConnectionEstablishedMessage" Size="20" NetworkIds="50">
+  </StructureDescriptor>
+  <StructureDescriptor Index="352" Name="ConnectionEstablishedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="353" Name="QuitGameMessage" Size="12" NetworkIds="3">
+  </StructureDescriptor>
+  <StructureDescriptor Index="353" Name="QuitGameMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="12" Flags="17" EncodedBits="4" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="354" Name="JoinLANGameMessage" Size="196" NetworkIds="11">
+  </StructureDescriptor>
+  <StructureDescriptor Index="354" Name="JoinLANGameMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_CHARARRAY#24" Offset="12" Flags="1" ArrayLength="128" EncodedBits="8" />
     <Field Type="DT_CHARARRAY#24" Offset="140" Flags="1" ArrayLength="49" EncodedBits="6" />
     <Field Type="DT_INT#1" Offset="192" Min="2" Max="17" Flags="17" EncodedBits="4" />
     <Field Offset="196" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="355" Name="ANNDataMessage" Size="12" NetworkIds="32 34 35 36 65 67 72 94 102 103 105 114 118 143 144 145 155 156 164 184 185 209 210 215 216 240 250 274 283 284 306">
+  </StructureDescriptor>
+  <StructureDescriptor Index="355" Name="ANNDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="356" Name="BroadcastTextMessage" Size="520" NetworkIds="302">
+  </StructureDescriptor>
+  <StructureDescriptor Index="356" Name="BroadcastTextMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_CHARARRAY#24" Offset="8" Flags="1" ArrayLength="512" EncodedBits="10" />
     <Field Offset="520" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="357" Name="DisplayGameTextMessage" Size="536" NetworkIds="211">
+  </StructureDescriptor>
+  <StructureDescriptor Index="357" Name="DisplayGameTextMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_CHARARRAY#24" Offset="8" Flags="1" ArrayLength="512" EncodedBits="10" />
     <Field Type="DT_OPTIONAL#197" Offset="520" Flags="1" SubType="DT_INT#1" EncodedBits="32" />
     <Field Type="DT_OPTIONAL#197" Offset="528" Flags="1" SubType="DT_INT#1" EncodedBits="32" />
     <Field Offset="536" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="358" Name="GBIDDataMessage" Size="12" NetworkIds="115 214 280">
+  </StructureDescriptor>
+  <StructureDescriptor Index="358" Name="GBIDDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_GBID#181" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="359" Name="SNONameDataMessage" Size="16" NetworkIds="224">
+  </StructureDescriptor>
+  <StructureDescriptor Index="359" Name="SNONameDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="SNOName#104" Offset="8" Flags="1" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="360" Name="SNODataMessage" Size="12" NetworkIds="203 204 233 292 305 310">
+  </StructureDescriptor>
+  <StructureDescriptor Index="360" Name="SNODataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="361" Name="FloatDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_FLOAT#5" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="362" Name="UInt64DataMessage" Size="16" NetworkIds="18">
+  <StructureDescriptor Index="362" Name="UInt64DataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT64#89" Offset="8" Flags="1" EncodedBits="64" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="363" Name="Int64DataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT64#89" Offset="8" Flags="1" EncodedBits="64" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="364" Name="IntDataMessage" Size="12" NetworkIds="20 116 212 231 261 278 285 287">
+  <StructureDescriptor Index="364" Name="IntDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="365" Name="NetworkAddressMessage" Size="16" NetworkIds="15">
+  </StructureDescriptor>
+  <StructureDescriptor Index="365" Name="NetworkAddressMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_WORD#33" Offset="12" Flags="1" EncodedBits="16" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="366" Name="DWordDataMessage" Size="12" NetworkIds="6 88 89 90 91 149 213 228 298 299 300 301">
+  </StructureDescriptor>
+  <StructureDescriptor Index="366" Name="DWordDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="367" Name="DataIDDataMessage" Size="12" NetworkIds="150 151">
+  </StructureDescriptor>
+  <StructureDescriptor Index="367" Name="DataIDDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="368" Name="PlayerIndexMessage" Size="12" NetworkIds="42 43 162 173 175 295 313 314 317 318">
+  </StructureDescriptor>
+  <StructureDescriptor Index="368" Name="PlayerIndexMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="-1" Max="7" Flags="17" EncodedBits="4" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="369" Name="ByteDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_BYTE#38" Offset="8" Flags="1" EncodedBits="8" />
     <Field Offset="12" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="370" Name="BoolDataMessage" Size="12" NetworkIds="170 270 316 319 320">
+  <StructureDescriptor Index="370" Name="BoolDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="371" Name="GenericBlobMessage" Size="12" NetworkIds="14 28 29 30 31 46 47 55 161 244 245 246 247 248 249">
+  </StructureDescriptor>
+  <StructureDescriptor Index="371" Name="GenericBlobMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="372" Name="SimpleMessage" Size="8" NetworkIds="25 27 33 37 40 44 45 49 52 104 138 146 157 174 193 196 201 207 230 235 236 242 253 254 256 257 259 260 262 263 264 265 269 271 275 276 277 288 289 291 294 296 297 303 304 307 308 309 321 322">
+  </StructureDescriptor>
+  <StructureDescriptor Index="372" Name="SimpleMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Offset="8" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="373" Name="LogoutContextMessage" Size="12" NetworkIds="38 41">
+  </StructureDescriptor>
+  <StructureDescriptor Index="373" Name="LogoutContextMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="374" Name="HeroStateMessage" Size="17060" NetworkIds="63">
+  </StructureDescriptor>
+  <StructureDescriptor Index="374" Name="HeroStateMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="HeroStateData#375" Offset="8" Flags="1" />
     <Field Offset="17060" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="375" Name="HeroStateData">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
@@ -3145,13 +3145,13 @@
     </Field>
     <Field Offset="12" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="383" Name="PlayerKickTimerMessage" Size="16" NetworkIds="54">
+  <StructureDescriptor Index="383" Name="PlayerKickTimerMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="384" Name="NewPlayerMessage" Size="17184" NetworkIds="53">
+  </StructureDescriptor>
+  <StructureDescriptor Index="384" Name="NewPlayerMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="7" Flags="17" EncodedBits="3" />
     <Field Type="EntityId#179" Offset="16" Flags="1" />
@@ -3161,14 +3161,15 @@
     <Field Type="DT_INT#1" Offset="104" Min="-1" Max="4" Flags="17" EncodedBits="3" />
     <Field Name="snoActorPortrait" Type="DT_SNO#78" Offset="108" Flags="1" EncodedBits="32" SnoType="1" />
     <Field Type="DT_INT#1" Offset="112" Min="0" Max="127" Flags="17" EncodedBits="7" />
-    <Field Type="HeroStateData#375" Offset="116" Flags="1" />
-    <Field Type="DT_INT#1" Offset="17168" Min="0" Max="1" Flags="17" EncodedBits="1" />
-    <Field Type="DT_INT#1" Offset="17172" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="116" Min="0" Max="100" Flags="17" EncodedBits="7" />
+    <Field Type="HeroStateData#375" Offset="120" Flags="1" />
+    <Field Type="DT_INT#1" Offset="17172" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_INT#1" Offset="17176" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="17180" Flags="1" EncodedBits="32" />
     <Field Offset="17184" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="385" Name="GameErrorData">
-    <Field Type="DT_INT#1" Offset="0" Min="0" Max="84" Flags="17" EncodedBits="7" />
+    <Field Type="DT_INT#1" Offset="0" Min="0" Max="85" Flags="17" EncodedBits="7" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
     <Field Offset="8" Flags="0" />
   </StructureDescriptor>
@@ -3257,33 +3258,32 @@
     <Field Type="DT_FLOAT#5" Offset="60" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="64" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="68" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FIXEDARRAY#20" Offset="72" Flags="1" SubType="RGBAColor#37" ArrayLength="400" />
-    <Field Type="DT_INT#1" Offset="1672" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="1676" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1680" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1684" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="1688" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1692" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1696" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1700" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1704" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1708" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="1712" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FIXEDARRAY#20" Offset="1716" Flags="1" SubType="DT_INT#1" ArrayLength="4" EncodedBits="32" />
-    <Field Type="BannerParams#399" Offset="1736" Flags="1" />
-    <Field Type="DT_INT#1" Offset="1968" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="1972" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="1976" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="1980" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1984" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1988" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1992" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="1996" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="2000" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="2004" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="2008" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FLOAT#5" Offset="2012" Flags="1" EncodedBits="32" />
-    <Field Offset="2016" Flags="0" />
+    <Field Type="DT_INT#1" Offset="72" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="76" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="80" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="84" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="88" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="92" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="96" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="100" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="104" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="108" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="112" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FIXEDARRAY#20" Offset="116" Flags="1" SubType="DT_INT#1" ArrayLength="4" EncodedBits="32" />
+    <Field Type="BannerParams#399" Offset="136" Flags="1" />
+    <Field Type="DT_INT#1" Offset="368" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="372" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="376" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="380" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="384" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="388" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="392" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="396" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="400" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="404" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="408" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="412" Flags="1" EncodedBits="32" />
+    <Field Offset="416" Flags="0" />
   </StructureDescriptor>
   <StructureDescriptor Index="394" Name="GlobalServerData">
     <Field Type="DT_VARIABLEARRAY#3" Offset="0" Flags="33" SubType="ActorGroup#395" VariableOffset="8" />
@@ -3500,20 +3500,20 @@
     <Field Type="DT_WORD#33" Offset="2" Flags="1" EncodedBits="16" />
     <Field Offset="4" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="412" Name="SwapSceneMessage" Size="20" NetworkIds="59">
+  <StructureDescriptor Index="412" Name="SwapSceneMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="413" Name="DestroySceneMessage" Size="16" NetworkIds="58">
+  </StructureDescriptor>
+  <StructureDescriptor Index="413" Name="DestroySceneMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="414" Name="RevealSceneMessage" Size="1292" NetworkIds="57">
+  </StructureDescriptor>
+  <StructureDescriptor Index="414" Name="RevealSceneMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="SceneSpecification#415" Offset="12" Flags="1" />
@@ -3524,7 +3524,7 @@
     <Field Name="snoSceneGroup" Type="DT_SNO#78" Offset="260" Flags="1" EncodedBits="32" SnoType="34" />
     <Field Name="arAppliedLabels" Type="DT_FIXEDARRAY#20" Offset="268" Flags="8" SubType="DT_GBID#181" ArrayLength="256" ArrayLengthOffset="-4" EncodedBits="32" EncodedBits2="9" />
     <Field Offset="1292" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="415" Name="SceneSpecification" UnkValue="4">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="IVector2D#35" Offset="4" Flags="1" />
@@ -4471,17 +4471,17 @@
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
   </StructureDescriptor>
-  <StructureDescriptor Index="489" Name="Recipe" UnkValue="1">
+  <StructureDescriptor Index="489" Name="Recipe" UnkValue="2">
     <Field Type="ItemSpecifierData#490" Offset="12" Flags="1" />
-    <Field Offset="40" Flags="0" />
+    <Field Offset="52" Flags="0" />
   </StructureDescriptor>
   <StructureDescriptor Index="490" Name="ItemSpecifierData">
     <Field Name="gbidItem" Type="DT_GBID#181" Offset="0" Flags="1" EncodedBits="32" SnoType="2" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
-    <Field Name="gbidAffixes" Type="DT_FIXEDARRAY#20" Offset="8" Flags="1" SubType="DT_GBID#181" ArrayLength="3" EncodedBits="32" SnoType="8" />
-    <Field Type="DT_INT#1" Offset="20" Flags="1" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="24" Flags="1" EncodedBits="32" />
-    <Field Offset="28" Flags="0" />
+    <Field Name="gbidAffixes" Type="DT_FIXEDARRAY#20" Offset="8" Flags="1" SubType="DT_GBID#181" ArrayLength="6" EncodedBits="32" SnoType="8" />
+    <Field Type="DT_INT#1" Offset="32" Flags="1" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="36" Flags="1" EncodedBits="32" />
+    <Field Offset="40" Flags="0" />
   </StructureDescriptor>
   <StructureDescriptor Index="491" Name="TimedEvent" UnkValue="1">
     <Field Type="DT_TIME#59" Offset="12" Flags="1" EncodedBits="32" />
@@ -4611,7 +4611,7 @@
     <Field Offset="40" Flags="0" />
   </StructureDescriptor>
   <BasicDescriptor Index="508" Name="DT_HIGHPRECISIONPERCENT" />
-  <StructureDescriptor Index="509" Name="LootDropModifier" UnkValue="1">
+  <StructureDescriptor Index="509" Name="LootDropModifier" UnkValue="2">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Name="snoSubTreasureClass" Type="DT_SNO#78" Offset="4" Flags="1" EncodedBits="32" SnoType="52" />
     <Field Type="DT_HIGHPRECISIONPERCENT#508" Offset="8" Flags="1" EncodedBits="32" />
@@ -4621,10 +4621,10 @@
     <Field Type="DT_INT#1" Offset="24" Flags="1" EncodedBits="32" />
     <Field Name="snoCondition" Type="DT_SNO#78" Offset="28" Flags="1" EncodedBits="32" SnoType="51" />
     <Field Type="ItemSpecifierData#490" Offset="32" Flags="1" />
-    <Field Type="DT_INT#1" Offset="60" Flags="1" EncodedBits="32" />
-    <Field Type="DT_FIXEDARRAY#20" Offset="64" Flags="0" SubType="DT_INT#1" ArrayLength="4" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="80" Flags="1" EncodedBits="32" />
-    <Field Offset="84" Flags="0" />
+    <Field Type="DT_INT#1" Offset="72" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FIXEDARRAY#20" Offset="76" Flags="0" SubType="DT_INT#1" ArrayLength="4" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="92" Flags="1" EncodedBits="32" />
+    <Field Offset="96" Flags="0" />
   </StructureDescriptor>
   <StructureDescriptor Index="510" Name="BossEncounter" UnkValue="4">
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
@@ -4663,23 +4663,23 @@
     <Field Type="DT_VARIABLEARRAY#3" Offset="24" Flags="32" SubType="DT_BYTE#38" VariableOffset="-12" />
     <Field Offset="32" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="514" Name="AssignTraitsMessage" Size="20" NetworkIds="110">
+  <StructureDescriptor Index="514" Name="AssignTraitsMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoPower" Type="DT_FIXEDARRAY#20" Offset="8" Flags="1" SubType="DT_SNO#78" ArrayLength="3" EncodedBits="32" SnoType="29" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="515" Name="UnassignSkillMessage" Size="12" NetworkIds="109">
+  </StructureDescriptor>
+  <StructureDescriptor Index="515" Name="UnassignSkillMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="5" Flags="17" EncodedBits="3" />
     <Field Offset="12" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="516" Name="AssignSkillMessage" Size="20" NetworkIds="108 111 112">
+  </StructureDescriptor>
+  <StructureDescriptor Index="516" Name="AssignSkillMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoPower" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="29" />
     <Field Type="DT_INT#1" Offset="12" Min="-1" Max="4" Flags="17" EncodedBits="3" />
     <Field Type="DT_INT#1" Offset="16" Min="0" Max="5" Flags="17" EncodedBits="3" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="517" Name="SavedConversations">
     <Field Type="DT_INT#1" Offset="0" Flags="1" EncodedBits="32" />
     <Field Type="DT_FIXEDARRAY#20" Offset="4" Flags="1" SubType="DT_BYTE#38" ArrayLength="32" EncodedBits="8" />
@@ -4713,7 +4713,7 @@
     <Field Type="DT_FIXEDARRAY#20" Offset="92" Flags="1" SubType="DT_INT#1" ArrayLength="20" EncodedBits="32" />
     <Field Offset="172" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="520" Name="QuestCounterMessage" Size="32" NetworkIds="160">
+  <StructureDescriptor Index="520" Name="QuestCounterMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoQuest" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="31" />
     <Field Name="snoLevelArea" Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" SnoType="22" />
@@ -4722,15 +4722,15 @@
     <Field Type="DT_INT#1" Offset="24" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="28" Flags="1" EncodedBits="32" />
     <Field Offset="32" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="521" Name="QuestMeterMessage" Size="20" NetworkIds="159">
+  </StructureDescriptor>
+  <StructureDescriptor Index="521" Name="QuestMeterMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoQuest" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="31" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="522" Name="QuestUpdateMessage" Size="28" NetworkIds="158">
+  </StructureDescriptor>
+  <StructureDescriptor Index="522" Name="QuestUpdateMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Name="snoQuest" Type="DT_SNO#78" Offset="8" Flags="1" EncodedBits="32" SnoType="31" />
     <Field Name="snoLevelArea" Type="DT_SNO#78" Offset="12" Flags="1" EncodedBits="32" SnoType="22" />
@@ -4738,45 +4738,45 @@
     <Field Type="DT_INT#1" Offset="20" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_INT#1" Offset="24" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="523" Name="CrafterLevelUpMessage" Size="20" NetworkIds="282">
+  </StructureDescriptor>
+  <StructureDescriptor Index="523" Name="CrafterLevelUpMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="524" Name="CraftingResultsMessage" Size="20" NetworkIds="281">
+  </StructureDescriptor>
+  <StructureDescriptor Index="524" Name="CraftingResultsMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_GBID#181" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="16" Flags="1" EncodedBits="32" />
     <Field Offset="20" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="525" Name="EnchantItemMessage" Size="16" NetworkIds="273">
+  </StructureDescriptor>
+  <StructureDescriptor Index="525" Name="EnchantItemMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_GBID#181" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="526" Name="GoldModifiedMessage" Size="16" NetworkIds="178">
+  </StructureDescriptor>
+  <StructureDescriptor Index="526" Name="GoldModifiedMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="13" Flags="17" EncodedBits="4" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="527" Name="ACDCollFlagsMessage" Size="16" NetworkIds="177">
+  </StructureDescriptor>
+  <StructureDescriptor Index="527" Name="ACDCollFlagsMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_DATAID#231" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="12" Min="0" Max="4095" Flags="17" EncodedBits="12" />
     <Field Offset="16" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="528" Name="RareItemNameMessage" Size="28" NetworkIds="79">
+  </StructureDescriptor>
+  <StructureDescriptor Index="528" Name="RareItemNameMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="RareItemName#529" Offset="12" Flags="1" />
     <Field Offset="28" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="529" Name="RareItemName">
     <Field Type="DT_INT#1" Offset="0" Min="0" Max="1" Flags="17" EncodedBits="1" />
     <Field Name="snoAffixStringList" Type="DT_SNO#78" Offset="4" Flags="1" EncodedBits="32" SnoType="42" />
@@ -4784,13 +4784,13 @@
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="530" Name="RareMonsterNamesMessage" Size="52" NetworkIds="78">
+  <StructureDescriptor Index="530" Name="RareMonsterNamesMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="DT_INT#1" Offset="8" Flags="1" EncodedBits="32" />
     <Field Type="DT_FIXEDARRAY#20" Offset="12" Flags="1" SubType="DT_GBID#181" ArrayLength="2" EncodedBits="32" />
     <Field Type="DT_FIXEDARRAY#20" Offset="20" Flags="1" SubType="DT_GBID#181" ArrayLength="8" EncodedBits="32" />
     <Field Offset="52" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="531" Name="GameBalance" UnkValue="3">
     <Field Type="DT_INT#1" Offset="12" Flags="1" EncodedBits="32" />
     <Field Type="DT_CHARARRAY#24" Offset="16" Flags="1" ArrayLength="256" EncodedBits="9" />
@@ -4972,6 +4972,8 @@
     <Field Type="DT_FLAG#534" Offset="268" Flags="1" EncodedBits="1" FlagIndex="5" />
     <Field Type="DT_FLAG#534" Offset="268" Flags="1" EncodedBits="1" FlagIndex="7" />
     <Field Type="DT_FLAG#534" Offset="268" Flags="1" EncodedBits="1" FlagIndex="6" />
+    <Field Type="DT_FLAG#534" Offset="268" Flags="1" EncodedBits="1" FlagIndex="8" />
+    <Field Type="DT_FLAG#534" Offset="268" Flags="1" EncodedBits="1" FlagIndex="9" />
     <Field Type="DT_INT#1" Offset="272" Flags="1" EncodedBits="32" />
     <Field Type="DT_INT#1" Offset="276" Flags="1" EncodedBits="32" />
     <Field Type="DT_ENUM#112" Offset="280" Min="-1" Max="1000" Flags="17" EncodedBits="10">
@@ -5453,11 +5455,12 @@
       </Enum>
     </Field>
     <Field Type="DT_INT#1" Offset="296" Flags="1" EncodedBits="32" />
-    <Field Name="RareNamePrefixStringList" Type="DT_SNO#78" Offset="300" Flags="1" EncodedBits="32" SnoType="42" />
-    <Field Name="RareNameSuffixStringList" Type="DT_SNO#78" Offset="304" Flags="1" EncodedBits="32" SnoType="42" />
-    <Field Name="AffixFamily0" Type="DT_GBID#181" Offset="308" Flags="1" EncodedBits="32" SnoType="8" />
-    <Field Name="AffixFamily1" Type="DT_GBID#181" Offset="312" Flags="1" EncodedBits="32" SnoType="8" />
-    <Field Type="DT_ENUM#112" Offset="316" Min="-1" Max="4" Flags="17" EncodedBits="3">
+    <Field Name="ConvertsTo" Type="DT_GBID#181" Offset="300" Flags="1" EncodedBits="32" SnoType="8" />
+    <Field Name="RareNamePrefixStringList" Type="DT_SNO#78" Offset="304" Flags="1" EncodedBits="32" SnoType="42" />
+    <Field Name="RareNameSuffixStringList" Type="DT_SNO#78" Offset="308" Flags="1" EncodedBits="32" SnoType="42" />
+    <Field Name="AffixFamily0" Type="DT_GBID#181" Offset="312" Flags="1" EncodedBits="32" SnoType="8" />
+    <Field Name="AffixFamily1" Type="DT_GBID#181" Offset="316" Flags="1" EncodedBits="32" SnoType="8" />
+    <Field Type="DT_ENUM#112" Offset="320" Min="-1" Max="4" Flags="17" EncodedBits="3">
       <Enum>
         <Entry Name="- None -" Value="-1" />
         <Entry Name="DemonHunter" Value="0" />
@@ -5467,12 +5470,12 @@
         <Entry Name="Monk" Value="4" />
       </Enum>
     </Field>
-    <Field Name="ExclusionCategory" Type="DT_GBID#181" Offset="320" Flags="1" EncodedBits="32" SnoType="8" />
-    <Field Type="DT_FIXEDARRAY#20" Offset="324" Flags="1" SubType="DT_INT#1" ArrayLength="6" EncodedBits="32" />
-    <Field Type="DT_FIXEDARRAY#20" Offset="348" Flags="1" SubType="DT_INT#1" ArrayLength="16" EncodedBits="32" />
-    <Field Type="DT_FIXEDARRAY#20" Offset="412" Flags="1" SubType="DT_INT#1" ArrayLength="16" EncodedBits="32" />
-    <Field Type="DT_INT#1" Offset="476" Flags="1" EncodedBits="32" />
-    <Field Type="DT_ENUM#112" Offset="480" Min="0" Max="11" Flags="17" EncodedBits="4">
+    <Field Name="ExclusionCategory" Type="DT_GBID#181" Offset="324" Flags="1" EncodedBits="32" SnoType="8" />
+    <Field Type="DT_FIXEDARRAY#20" Offset="328" Flags="1" SubType="DT_INT#1" ArrayLength="6" EncodedBits="32" />
+    <Field Type="DT_FIXEDARRAY#20" Offset="352" Flags="1" SubType="DT_INT#1" ArrayLength="16" EncodedBits="32" />
+    <Field Type="DT_FIXEDARRAY#20" Offset="416" Flags="1" SubType="DT_INT#1" ArrayLength="16" EncodedBits="32" />
+    <Field Type="DT_INT#1" Offset="480" Flags="1" EncodedBits="32" />
+    <Field Type="DT_ENUM#112" Offset="484" Min="0" Max="11" Flags="17" EncodedBits="4">
       <Enum>
         <Entry Name="Prefix" Value="0" />
         <Entry Name="Suffix" Value="1" />
@@ -5485,9 +5488,9 @@
         <Entry Name="Socket Enhancement" Value="11" />
       </Enum>
     </Field>
-    <Field Name="AssociatedAffix" Type="DT_GBID#181" Offset="484" Flags="1" EncodedBits="32" SnoType="8" />
-    <Field Type="DT_FIXEDARRAY#20" Offset="488" Flags="1" SubType="AttributeSpecifier#554" ArrayLength="4" />
-    <Field Offset="656" Flags="0" />
+    <Field Name="AssociatedAffix" Type="DT_GBID#181" Offset="488" Flags="1" EncodedBits="32" SnoType="8" />
+    <Field Type="DT_FIXEDARRAY#20" Offset="496" Flags="1" SubType="AttributeSpecifier#554" ArrayLength="4" />
+    <Field Offset="664" Flags="0" />
   </StructureDescriptor>
   <StructureDescriptor Index="554" Name="AttributeSpecifier">
     <Field Type="DT_TRANSLATEABLE#537" Offset="0" Flags="1" />
@@ -6232,7 +6235,22 @@
     <Field Type="DT_FLOAT#5" Offset="1256" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="1260" Flags="1" EncodedBits="32" />
     <Field Type="DT_FLOAT#5" Offset="1264" Flags="1" EncodedBits="32" />
-    <Field Offset="1268" Flags="0" />
+    <Field Type="DT_FLOAT#5" Offset="1268" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1272" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1276" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1280" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1284" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1288" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1292" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1296" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1300" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1304" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1308" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1312" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1316" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1320" Flags="1" EncodedBits="32" />
+    <Field Type="DT_FLOAT#5" Offset="1324" Flags="1" EncodedBits="32" />
+    <Field Offset="1328" Flags="0" />
   </StructureDescriptor>
   <StructureDescriptor Index="584" Name="RecipesTable">
     <Field Name="serRecipes" Type="SerializeData#2" Offset="0" Flags="0" />
@@ -6266,11 +6284,11 @@
     <Field Name="Name" Type="DT_CHARARRAY#24" Offset="4" Flags="5" ArrayLength="256" EncodedBits="9" />
     <Field Offset="260" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="588" Name="GameSyncedDataMessage" Size="100" NetworkIds="186">
+  <StructureDescriptor Index="588" Name="GameSyncedDataMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="GameSyncedData#589" Offset="8" Flags="1" />
     <Field Offset="100" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
   <StructureDescriptor Index="589" Name="GameSyncedData">
     <Field Type="DT_INT#1" Offset="0" Min="0" Max="3" Flags="17" EncodedBits="2" />
     <Field Type="DT_INT#1" Offset="4" Flags="1" EncodedBits="32" />
@@ -6306,14 +6324,14 @@
     <Field Type="DT_INT64#89" Offset="8" Flags="1" EncodedBits="64" />
     <Field Offset="16" Flags="0" />
   </StructureDescriptor>
-  <GameMessageDescriptor Index="594" Name="GameIdMessage" Size="32" NetworkIds="17">
+  <StructureDescriptor Index="594" Name="GameIdMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="GameId#183" Offset="8" Flags="1" />
     <Field Offset="32" Flags="0" />
-  </GameMessageDescriptor>
-  <GameMessageDescriptor Index="595" Name="EntityIdMessage" Size="24" NetworkIds="22">
+  </StructureDescriptor>
+  <StructureDescriptor Index="595" Name="EntityIdMessage">
     <Field Type="RequiredMessageHeader#86" Offset="0" Flags="1" />
     <Field Type="EntityId#179" Offset="8" Flags="1" />
     <Field Offset="24" Flags="0" />
-  </GameMessageDescriptor>
+  </StructureDescriptor>
 </TypeDescriptors>

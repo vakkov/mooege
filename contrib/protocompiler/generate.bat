@@ -3,6 +3,7 @@
 @ECHO HeroProto.QuestHistoryList - 'quest_history' ^> 'history'
 @ECHO HeroProto.QuestRewardHistoryList - 'quest_reward_history' ^> 'reward_history'
 @ECHO AuctionHouseProto.Escrow - 'item' ^> 'auction_item'
+@ECHO Rename option (log) to option (method_id)
 
 @CHOICE /C:YN
 @IF ERRORLEVEL 2 goto :end

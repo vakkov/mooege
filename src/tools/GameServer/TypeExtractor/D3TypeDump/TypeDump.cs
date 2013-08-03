@@ -27,7 +27,7 @@ namespace D3TypeDump
 {
     class TypeDump
     {
-        const int HashAddress = 0x01318A30;
+        const int HashAddress = 0x01318A30;       //Diablo III.GetStackFrames+2300C0 - FF 8B 8DF4F4FF    - dec [ebx-000B0B73]
         const int HashOffset = 0x24;
 
         #region BETA
@@ -209,17 +209,48 @@ namespace D3TypeDump
         #endregion
 
         #region build 10057 addresses
-        const int OpcodeSwitch_Address = 0x008E6240;
-        const int TypeDescriptorsAddress = 0x0159A19C;
+		/*
+        const int OpcodeSwitch_Address = 0x008E6240;     //Diablo III.exe+E6240 - 55     - push ebp
+        const int TypeDescriptorsAddress = 0x0159A19C;   //Diablo III.MallocExtension::`vftable'+142BA8 - CC   - int 3
         const int TypeDescriptorsOffset = 40;
-        const int AttributesAddress = 0x0157D518;
+        const int AttributesAddress = 0x0157D518;        //Diablo III.MallocExtension::`vftable'+125F25 - 00 00  - add[eax],al
         const int AttributeCount = 826;
-        const int Attribute_Int = 0x01373660;
-        const int Attribute_IntMinMax = 0x01373668;
-        const int Attribute_FloatMinMax = 0x01373670;
-        const int Attribute_Float16 = 0x01373678;
-        const int Attribute_Float16Or32 = 0x01373680;
-        #endregion
+        const int Attribute_Int = 0x01373660;            //Diablo III.GetStackFrames+28ACF0 - 30 39              - xor [ecx],bh
+        const int Attribute_IntMinMax = 0x01373668;      //Diablo III.GetStackFrames+28ACF8 - C0 3D 8E00303E 8E  - sar byte ptr [3E30008E],8E
+        const int Attribute_FloatMinMax = 0x01373670;    //Diablo III.GetStackFrames+28AD00 - 90                 - nop 
+        const int Attribute_Float16 = 0x01373678;        //Diablo III.GetStackFrames+28AD08 - C0 3F 8E           - sar byte ptr [edi],8E
+        const int Attribute_Float16Or32 = 0x01373680;    //Diablo III.GetStackFrames+28AD10 - 50                 - push eax
+        */
+		#endregion
+
+		
+		#region build 11327 addresses 
+        const int OpcodeSwitch_Address = 0X008E61C0;
+		const int TypeDescriptorsAddress = 0x0153D574;
+		const int TypeDescriptorsOffset = 40;
+		const int AttributesAddress = 0x01520518;
+		const int AttributeCount = 831;
+        const int Attribute_Int = 0x0131E70C;
+        const int Attribute_IntMinMax = 0x0131E714;
+        const int Attribute_FloatMinMax = 0x0131E71C;
+        const int Attribute_Float16 = 0x0131E724;
+        const int Attribute_Float16Or32 = 0x0131E72C;
+		#endregion
+		
+        #region build 16603 addresses
+        //const int OpcodeSwitch_Address = 0x008E63C0;
+			/*
+        const int TypeDescriptorsAddress = ;         
+        const int TypeDescriptorsOffset = ; 
+        const int AttributesAddress = ;
+        const int AttributeCount = ;
+        const int Attribute_Int = ;
+        const int Attribute_IntMinMax = ;
+        const int Attribute_FloatMinMax = ;
+        const int Attribute_Float16 = ;
+        const int Attribute_Float16Or32 = ;
+        */
+		#endregion
 
         class GameMessageInfo
         {

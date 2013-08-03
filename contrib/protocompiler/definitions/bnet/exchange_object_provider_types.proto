@@ -76,3 +76,25 @@ message GetPaymentMethodsResponse
     repeated .bnet.protocol.exchange_object_provider.PaymentMethod methods = 1;
 }
 
+message GetAuthProgressRequest
+{
+    repeated .bnet.protocol.exchange.PartitionId tokens = 1;
+}
+
+message GetAuthProgressResponse
+{
+    repeated .bnet.protocol.exchange_object_provider.AuthProgress progresses = 1;
+}
+
+message AuthProgress
+{
+    required .bnet.protocol.exchange.PartitionId token = 1;
+    required .bnet.protocol.exchange.PartitionId partition_id = 2;
+    required uint64 total_progress = 3;
+    optional uint64 current_progress = 4;
+    optional uint64 complete_progress = 5;
+    optional bool deferred = 6;
+    optional uint64 completed = 7;
+    optional uint64 reason = 8;
+}
+

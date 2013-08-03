@@ -30,6 +30,7 @@ message OrderBookNotification
     required uint64 update_time = 7;
     optional uint64 closed_time = 8 [default = 0];
     required uint64 filled_amount = 9;
+    optional uint64 end_time = 10 [default = 0];
 }
 
 message OrderBookSummary
@@ -280,5 +281,6 @@ message HistoryData
     required .bnet.protocol.exchange.BlobFromOfType auth_handle = 29;
     required bool auth_deferred = 30;
     required .bnet.protocol.exchange.PartitionId token = 31;
+    optional uint64 fail_extra_error_code = 32;
 }
 
